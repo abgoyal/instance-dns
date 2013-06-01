@@ -35,13 +35,14 @@ From within a new instance:
 * Clone the repository
 
     > git clone git://github.com/abgoyal/instance-dns.git
+
     > cd instance-dns
 
 * Edit configuration
 
     > vi instance-dns.conf
 
-    At the very least you must change the base domain: Change it to a domain you own
+    At the very least you must change the base domain; Change it to a domain you own.
 
     You must also configure the required details for your DNS provider. In the case of Zonomi, for example, you need to update your own API key.
 
@@ -52,6 +53,6 @@ From within a new instance:
     This simply copies the config file to /etc, the script to /usr/bin, and adds the script to crontab, to be executed at boot.
 
 * Bake this instance into a template/image/AMI/equivalent/backup as per the requirements of your cloud provider. 
-Use this to launch as many instances as you want. Instance Dns will take the hostname assigned by the cloud provider at boot, and map it as a subdomain 
+Use this to launch as many instances as you want. Instance DNS will take the hostname assigned by the cloud provider at boot, and map it as a subdomain 
 to the base domain you configured in the config file.
 
